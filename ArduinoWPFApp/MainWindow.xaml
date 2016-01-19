@@ -7,9 +7,9 @@
         mc:Ignorable="d" Loaded="Window_Loaded" Closed="Window_Closed"
         Title="Arduino App" Height="350" Width="525" Icon="arduino.ico" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <StackPanel Orientation="Vertical">
-        <Label x:Name="lblPortData" FontSize="48" HorizontalAlignment="Center" Margin="0,20,0,0">Нет данных</Label>
-        <Button x:Name="btnOne" Click="btnOne_Click" Width="100" Height="30" Margin="0,10,0,0">Послать 1</Button>
-        <Button x:Name="btnZero" Click="btnZero_Click" Width="100" Height="30" Margin="0,10,0,0">Послать 0</Button>
+        <Label x:Name="lblPortData" FontSize="48" HorizontalAlignment="Center" Margin="0,20,0,0">No data</Label>
+        <Button x:Name="btnOne" Click="btnOne_Click" Width="100" Height="30" Margin="0,10,0,0">Send 1</Button>
+        <Button x:Name="btnZero" Click="btnZero_Click" Width="100" Height="30" Margin="0,10,0,0">Send 0</Button>
     </StackPanel>
 
 </Window>
