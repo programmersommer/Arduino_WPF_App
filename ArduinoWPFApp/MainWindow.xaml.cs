@@ -121,8 +121,8 @@ namespace ArduinoWPFApp
             try
             {
                 currentPort.DiscardInBuffer();  // remove old information from buffer
-                string POT = currentPort.ReadLine();  // read last value
-                lblPortData.Dispatcher.BeginInvoke(new updateDelegate(updateTextBox), POT);
+                string strFromPort = currentPort.ReadLine();  // read last value
+                lblPortData.Dispatcher.BeginInvoke(new updateDelegate(updateTextBox), strFromPort);
             }
             catch (Exception ex)
             {
