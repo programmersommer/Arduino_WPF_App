@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArduinoWPFApp"
-        mc:Ignorable="d" Loaded="Window_Loaded" Closed="Window_Closed"
+        mc:Ignorable="d" Loaded="Window_Loaded" Closing="Window_Closing"
         Title="Arduino App" Height="350" Width="525" Icon="arduino.ico" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
     <StackPanel Orientation="Vertical">
         <Label x:Name="lblPortData" FontSize="48" HorizontalAlignment="Center" Margin="0,20,0,0">No data</Label>

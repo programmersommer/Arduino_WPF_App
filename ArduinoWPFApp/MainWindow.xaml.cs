@@ -118,25 +118,28 @@ namespace ArduinoWPFApp
         private void OnTimedEvent(object sender, ElapsedEventArgs e)
         {
             if (!currentPort.IsOpen) return;
-            try 
+            try
             {
                 currentPort.DiscardInBuffer();  // remove old information from buffer
                 string POT = currentPort.ReadLine();  // read last value
                 lblPortData.Dispatcher.BeginInvoke(new updateDelegate(updateTextBox), POT);
             }
-            catch { }
-        }
+            catch (Exception ex)
+            {
+                lblPortData.Dispatcher.BeginInvoke(new updateDelegate(updateTextBox), ex.Message);
+            }
+}
 
         private void updateTextBox(string txt)
         {
             lblPortData.Content = txt;
         }
 
-        private void Window_Closed(object sender, EventArgs e)
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            aTimer.Enabled = false;
             currentPort.Close();
         }
-
-
     }
 }
